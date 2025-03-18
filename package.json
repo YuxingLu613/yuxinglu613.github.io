@@ -4,13 +4,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predeploy": "npm run build && next export",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d out",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "export": "next export"
+    "lint": "next lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
