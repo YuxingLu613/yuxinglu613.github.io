@@ -337,7 +337,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-8">
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
             <div className="w-56 h-56 rounded-full overflow-hidden bg-slate-700 flex-shrink-0 border-4 border-slate-600 mr-12">
-              <img src="/IMG_2714.jpeg" alt="Profile" className="w-full h-full object-cover" />
+              <img src="./IMG_2714.jpeg" alt="Profile" className="w-full h-full object-cover" />
             </div>
             <div className="flex-grow">
               <h1 className="text-3xl md:text-4xl font-bold">Yuxing Lu</h1>
