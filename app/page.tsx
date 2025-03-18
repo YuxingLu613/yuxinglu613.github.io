@@ -688,7 +688,7 @@ export default function Home() {
                       </div>
                       <p className="mt-2 text-slate-700" dangerouslySetInnerHTML={{ __html: pub.authors }}></p>
                       <p className="mt-1 text-slate-600 italic">{pub.journal}</p>
-                      {pub.sponsorship && <p className="mt-1 text-green-600 text-sm">{pub.sponsorship}</p>}
+                      {/* {pub.sponsorship && <p className="mt-1 text-green-600 text-sm">{pub.sponsorship}</p>} */}
                       <div className="mt-3 flex flex-wrap gap-2">
                         {pub.type === "preprint" && (
                           <span className="bg-slate-200 text-slate-800 text-xs font-medium px-2.5 py-1 rounded">
