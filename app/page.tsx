@@ -13,7 +13,7 @@ export default function Home() {
     {
       id: 1,
       title: "Optimized glycemic control of type 2 diabetes with reinforcement learning: a proof-of-concept trial",
-      authors: 'Wang, G., Liu, X., Ying, Z., Yang, G., Chen, Z., Liu, Z., ... & <span class="font-semibold">Lu, Yuxing</span>',
+      authors: 'Wang, G., Liu, X., Ying, Z., Yang, G., Chen, Z., Liu, Z., ..., <span class="font-semibold">Lu, Yuxing</span>, ...',
       journal: "Nature Medicine",
       year: "2023",
       tags: ["Medical AI", "Reinforcement Learning", "Diabetes"],
@@ -63,7 +63,7 @@ export default function Home() {
     {
       id: 6,
       title: "Accurate estimation of biological age and its application in disease prediction using a multimodal image Transformer system",
-      authors: 'Wang, J., Gao, Y., Wang, F., Zeng, S., Li, J., Miao, H., ... & <span class="font-semibold">Lu, Yuxing</span>',
+      authors: 'Wang, J., Gao, Y., Wang, F., Zeng, S., Li, J., Miao, H., ..., <span class="font-semibold">Lu, Yuxing</span>, ...',
       journal: "Proceedings of the National Academy of Sciences",
       year: "2024",
       tags: ["Medical AI", "CV", "Biological Age", "Disease Prediction"],
@@ -73,7 +73,7 @@ export default function Home() {
     {
       id: 7,
       title: "Self-improving generative foundation model for synthetic medical image generation and clinical applications",
-      authors: 'Wang, J., Wang, K., Yu, Y., <span class="font-semibold">Lu, Yuxing</span>, Xiao, W., Sun, Z., ... & Gao, Y.',
+      authors: 'Wang, J., Wang, K., Yu, Y., <span class="font-semibold">Lu, Yuxing</span>, ...',
       journal: "Nature Medicine",
       year: "2024",
       tags: ["Medical AI", "CV", "Reinforcement Learning","Generative Models"],
@@ -83,7 +83,7 @@ export default function Home() {
     {
       id: 8,
       title: "Millimeter-scale magnetic implants paired with a fully integrated wearable device for wireless biophysical and biochemical sensing",
-      authors: 'Wan, J., Nie, Z., Xu, J., Zhang, Z., Yao, S., Xiang, Z., ... & <span class="font-semibold">Lu, Yuxing</span>',
+      authors: 'Wan, J., Nie, Z., Xu, J., Zhang, Z., Yao, S., Xiang, Z., ... , <span class="font-semibold">Lu, Yuxing</span>, ...' ,
       journal: "Science Advances",
       year: "2024",
       tags: ["Sensing", "Wearable Devices"],
