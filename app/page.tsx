@@ -277,7 +277,8 @@ export default function Home() {
       type: "peer-reviewed",
     },
   ];
-  // Filter publications based on active filter and limit to top 10 results sorted by year
+
+  // Filter publications based on active filter
   const filteredPublications = publications.filter((pub) => {
     // Handle search term
     if (
@@ -298,7 +299,7 @@ export default function Home() {
     if (activeFilter === "all") return true
     if (activeFilter === "First Author") return pub.isFirstAuthor
     return pub.tags.includes(activeFilter)
-  }).sort((a, b) => b.year.localeCompare(a.year)).slice(0, 10)
+  })
 
   // Group publications by year for the timeline
   const publicationsByYear = React.useMemo(() => {
@@ -439,41 +440,39 @@ export default function Home() {
       {/* News Section */}
       <section className="mb-12 mt-8">
         <div className="container mx-auto px-4 md:px-8">
-          <h2 className="text-2xl font-bold border-b-2 border-slate-700 pb-2 mb-6 text-slate-800">Latest News</h2>
+          <h2 className="text-2xl font-bold border-b-2 border-slate-700 pb-2 mb-6 text-slate-800">Recent Updates</h2>
           <div className="bg-slate-50 rounded-lg p-5 shadow-sm border border-slate-200">
             <ul className="space-y-4">
               <li className="flex items-start">
                 <span className="bg-slate-700 text-white text-xs font-medium px-2.5 py-1 rounded-full mr-3 mt-1 flex-shrink-0">
-                  2024-03
+                  2025-03
                 </span>
                 <p className="text-slate-700 leading-relaxed">
-                  Our paper "Multiscale scoring model for enhanced urban perception evaluation" has been accepted by
-                  IEEE ICASSP 2024!
+                  Our research paper "Cross-modal alignment with synthetic caption for text-based person search" has been accepted by the International Journal of Multimedia Information Retrieval!
                 </p>
               </li>
               <li className="flex items-start">
                 <span className="bg-slate-700 text-white text-xs font-medium px-2.5 py-1 rounded-full mr-3 mt-1 flex-shrink-0">
-                  2024-02
+                  2025-03
                 </span>
                 <p className="text-slate-700 leading-relaxed">
-                  Received the IEEE Signal Processing Society travel grant ($500) for ICASSP 2024.
+                  I had the opportunity to present our research paper "END ^2: Robust Dual-Decoder Watermarking Framework Against Non-Differentiable Distortions" at AAAI 2025!
                 </p>
               </li>
               <li className="flex items-start">
                 <span className="bg-slate-700 text-white text-xs font-medium px-2.5 py-1 rounded-full mr-3 mt-1 flex-shrink-0">
-                  2023-12
+                  2024-12
                 </span>
                 <p className="text-slate-700 leading-relaxed">
-                  Honored as one of the "Top Ten Outstanding Youth Volunteer Exemplars" at Peking University.
+                  I was honored to receive the National Scholarship!
                 </p>
               </li>
               <li className="flex items-start">
                 <span className="bg-slate-700 text-white text-xs font-medium px-2.5 py-1 rounded-full mr-3 mt-1 flex-shrink-0">
-                  2023-11
+                  2024-06
                 </span>
                 <p className="text-slate-700 leading-relaxed">
-                  Our paper "MoTIF: a Method for Trustworthy Dynamic Multi-modal Learning on Omics" has been accepted by
-                  IEEE BIBM 2023.
+                  I was selected for the Tencent Rhino-bird Elite Program and began my internship at Tencent AI for Life Science Lab, which lasted for a year!
                 </p>
               </li>
             </ul>
@@ -492,7 +491,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-slate-800">Peking University</h3>
                 <span className="text-slate-600 font-medium">2022-2027 (est.)</span>
               </div>
-              <p className="font-medium text-slate-700 mt-2">PhD. Biomedical Engineering</p>
+              <p className="font-medium text-slate-700 mt-2">PhD. Biomedical Engineering (Joint Program with Georgia Tech and Emory University)</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
               <div className="flex flex-col md:flex-row justify-between">
@@ -512,14 +511,21 @@ export default function Home() {
           <div className="space-y-6">
             <div>
               <div className="flex flex-col md:flex-row justify-between">
+                <h3 className="text-xl font-semibold text-slate-800">Tencent Technology</h3>
+                <span className="text-slate-600">2024.06-2025.06 (est.)</span>
+              </div>
+              <p className="font-medium text-slate-700">Intern, Shenzhen</p>
+            </div>
+            <div>
+              <div className="flex flex-col md:flex-row justify-between">
                 <h3 className="text-xl font-semibold text-slate-800">Huawei Technologies Co., Ltd</h3>
                 <span className="text-slate-600">2021.07-2021.12</span>
               </div>
               <p className="font-medium text-slate-700">AI Engineer (Intern), Nanjing</p>
-              <p className="text-slate-700">
+              {/* <p className="text-slate-700">
                 Process data from tens of millions of end-users to establish an advertising distribution recommendation
                 model.
-              </p>
+              </p> */}
             </div>
             <div>
               <div className="flex flex-col md:flex-row justify-between">
@@ -529,9 +535,9 @@ export default function Home() {
                 <span className="text-slate-600">2021.02-2021.06</span>
               </div>
               <p className="font-medium text-slate-700">Research Intern, Suzhou</p>
-              <p className="text-slate-700">
+              {/* <p className="text-slate-700">
                 Develop a pregnancy-related QA system using knowledge graph from 27,000+ inquiries and expert responses.
-              </p>
+              </p> */}
             </div>
           </div>
         </section>
@@ -734,6 +740,18 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
               <p className="font-medium text-slate-800">
+                [P] Method, Apparatus, Equipment and Storage Medium for Processing Biological Samples
+              </p>
+              <p className="text-slate-600 mt-1">No. 202411677321 | 2024.11</p>
+            </div>
+            <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+              <p className="font-medium text-slate-800">
+                [P] Training Method, Apparatus, Electronic Device, Medium and Program Product for Prediction Model
+              </p>
+              <p className="text-slate-600 mt-1">No. 202411162345 | 2024.07</p>
+            </div>
+            <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+              <p className="font-medium text-slate-800">
                 [P] Dual-modal scoring system coupling park social media texts and images
               </p>
               <p className="text-slate-600 mt-1">No. 2024100167605 | 2024.01</p>
@@ -762,9 +780,19 @@ export default function Home() {
         {/* Honors and Awards */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold border-b-2 border-slate-700 pb-2 mb-6 text-slate-800">
-            🏆 Selected Honors and Awards
+            Selected Honors and Awards
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+              <p className="font-medium text-slate-800">National Scholarship</p>
+              <p className="text-slate-600 mt-1">Peking University</p>
+              <p className="text-slate-500 text-sm mt-1">2024.12</p>
+            </div>
+            <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+              <p className="font-medium text-slate-800">Principle's Scholarship</p>
+              <p className="text-slate-600 mt-1">Peking University</p>
+              <p className="text-slate-500 text-sm mt-1">2024.06</p>
+            </div>
             <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
               <p className="font-medium text-slate-800">Top Ten Outstanding Youth Volunteer Exemplars</p>
               <p className="text-slate-600 mt-1">Peking University</p>
@@ -791,19 +819,9 @@ export default function Home() {
               <p className="text-slate-500 text-sm mt-1">2021.10</p>
             </div>
             <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
-              <p className="font-medium text-slate-800">"Yuhan" Scholarship</p>
-              <p className="text-slate-600 mt-1">Soochow University</p>
-              <p className="text-slate-500 text-sm mt-1">2021.10</p>
-            </div>
-            <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
               <p className="font-medium text-slate-800">Second Prize (National)</p>
               <p className="text-slate-600 mt-1">"Lanqiao" Software National Competition</p>
               <p className="text-slate-500 text-sm mt-1">2021.05</p>
-            </div>
-            <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
-              <p className="font-medium text-slate-800">Meritorious (International)</p>
-              <p className="text-slate-600 mt-1">MCM/ICM Mathematical Modeling Competition</p>
-              <p className="text-slate-500 text-sm mt-1">2021.04</p>
             </div>
           </div>
         </section>
