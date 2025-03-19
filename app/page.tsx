@@ -277,8 +277,7 @@ export default function Home() {
       type: "peer-reviewed",
     },
   ];
-
-  // Filter publications based on active filter
+  // Filter publications based on active filter and limit to top 10 results sorted by year
   const filteredPublications = publications.filter((pub) => {
     // Handle search term
     if (
@@ -299,7 +298,7 @@ export default function Home() {
     if (activeFilter === "all") return true
     if (activeFilter === "First Author") return pub.isFirstAuthor
     return pub.tags.includes(activeFilter)
-  })
+  }).sort((a, b) => b.year.localeCompare(a.year)).slice(0, 10)
 
   // Group publications by year for the timeline
   const publicationsByYear = React.useMemo(() => {
@@ -621,7 +620,7 @@ export default function Home() {
                 NLP
               </button>
               <button
-                onClick={() => setActiveFilter("NLP")}
+                onClick={() => setActiveFilter("Knowledge Graph")}
                 className={`px-4 py-2 rounded-md transition-colors ${
                   activeFilter === "Knowledge Graph"
                     ? "bg-slate-800 text-white"
