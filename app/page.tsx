@@ -278,28 +278,30 @@ export default function Home() {
     },
   ];
 
-  // Filter publications based on active filter
-  const filteredPublications = publications.filter((pub) => {
-    // Handle search term
-    if (
-      searchTerm &&
-      !pub.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
-      !pub.authors.toLowerCase().includes(searchTerm.toLowerCase()) &&
-      !pub.journal.toLowerCase().includes(searchTerm.toLowerCase())
-    ) {
-      return false
-    }
+  // Filter publications based on active filter and sort by year
+  const filteredPublications = publications
+    .filter((pub) => {
+      // Handle search term
+      if (
+        searchTerm &&
+        !pub.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
+        !pub.authors.toLowerCase().includes(searchTerm.toLowerCase()) &&
+        !pub.journal.toLowerCase().includes(searchTerm.toLowerCase())
+      ) {
+        return false
+      }
 
-    // Handle preprints visibility
-    if (!preprints && pub.type === "preprint") {
-      return false
-    }
+      // Handle preprints visibility
+      if (!preprints && pub.type === "preprint") {
+        return false
+      }
 
-    // Handle filters
-    if (activeFilter === "all") return true
-    if (activeFilter === "First Author") return pub.isFirstAuthor
-    return pub.tags.includes(activeFilter)
-  })
+      // Handle filters
+      if (activeFilter === "all") return true
+      if (activeFilter === "First Author") return pub.isFirstAuthor
+      return pub.tags.includes(activeFilter)
+    })
+    .sort((a, b) => parseInt(b.year) - parseInt(a.year)) // Sort by year in descending order
 
   // Group publications by year for the timeline
   const publicationsByYear = React.useMemo(() => {
@@ -315,7 +317,7 @@ export default function Home() {
 
   // Get years sorted for timeline
   const timelineYears = React.useMemo(() => {
-    return Object.keys(publicationsByYear).sort()
+    return Object.keys(publicationsByYear).sort((a, b) => parseInt(b) - parseInt(a)) // Sort years in descending order
   }, [publicationsByYear])
 
   // Get max count for scaling the timeline bars
