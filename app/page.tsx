@@ -508,38 +508,31 @@ export default function Home() {
         </section>
 
         {/* Internship */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold border-b-2 border-slate-700 pb-2 mb-4 text-slate-800">Internship</h2>
-          <div className="space-y-6">
-            <div>
+        <section className="mb-14">
+          <h2 className="text-2xl font-bold border-b-2 border-slate-700 pb-2 mb-6 text-slate-800">Internship</h2>
+          <div className="space-y-8">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
               <div className="flex flex-col md:flex-row justify-between">
                 <h3 className="text-xl font-semibold text-slate-800">Tencent Technology</h3>
                 <span className="text-slate-600">2024.06-2025.06 (est.)</span>
               </div>
-              <p className="font-medium text-slate-700">Intern, Shenzhen</p>
+              <p className="font-medium text-slate-700 mt-2">Intern, Shenzhen</p>
             </div>
-            <div>
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
               <div className="flex flex-col md:flex-row justify-between">
                 <h3 className="text-xl font-semibold text-slate-800">Huawei Technologies Co., Ltd</h3>
                 <span className="text-slate-600">2021.07-2021.12</span>
               </div>
-              <p className="font-medium text-slate-700">AI Engineer (Intern), Nanjing</p>
-              {/* <p className="text-slate-700">
-                Process data from tens of millions of end-users to establish an advertising distribution recommendation
-                model.
-              </p> */}
+              <p className="font-medium text-slate-700 mt-2">AI Engineer (Intern), Nanjing</p>
             </div>
-            <div>
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
               <div className="flex flex-col md:flex-row justify-between">
                 <h3 className="text-xl font-semibold text-slate-800">
                   National University of Singapore Research Institute
                 </h3>
                 <span className="text-slate-600">2021.02-2021.06</span>
               </div>
-              <p className="font-medium text-slate-700">Research Intern, Suzhou</p>
-              {/* <p className="text-slate-700">
-                Develop a pregnancy-related QA system using knowledge graph from 27,000+ inquiries and expert responses.
-              </p> */}
+              <p className="font-medium text-slate-700 mt-2">Research Intern, Suzhou</p>
             </div>
           </div>
         </section>
